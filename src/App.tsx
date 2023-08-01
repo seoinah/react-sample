@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { RecoilRoot } from 'recoil';
 import './App.css'
 
 function App() {
@@ -21,13 +22,15 @@ function App() {
     }
 
   return (
-      <div className="App">
-          <button onClick={OnClick1}> page1</button>
-          <button onClick={OnClick2}> page2</button>
-          {!pageName && <Home />}
-          {pageName === "page1" && <Page1 />}
-          {pageName === "page2" && <Page2 />}
-      </div>
+      <RecoilRoot>
+          <div className="App">
+              <button onClick={OnClick1}> page1</button>
+              <button onClick={OnClick2}> page2</button>
+              {!pageName && <Home />}
+              {pageName === "page1" && <Page1 />}
+              {pageName === "page2" && <Page2 />}
+          </div>
+      </RecoilRoot>
   )
 }
 
