@@ -3,7 +3,7 @@ import {useRecoilState} from "recoil";
 import {defaultFormAtom} from "../../states/formAtom";
 import * as React from "react";
 
-export interface IDefaultForm {
+export type TDefaultForm = {
     firstname: string,
     lastname: string,
     country: string,

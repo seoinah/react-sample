@@ -1,7 +1,7 @@
 import {atom} from "recoil";
-import {IDefaultForm} from "../components/form/DefaultForm";
+import {TDefaultForm} from "../components/form/DefaultForm";
 
-export const defaultFormAtom = atom<IDefaultForm>({
+export const defaultFormAtom = atom<TDefaultForm>({
     key: `defaultFormAtom`,
     default: {
         firstname: '',

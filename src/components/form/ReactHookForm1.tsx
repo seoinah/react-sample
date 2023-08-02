@@ -1,6 +1,6 @@
 import '../../assets/css/form.css';
 import {SubmitHandler, useForm} from "react-hook-form";
-import {IDefaultForm} from "./DefaultForm";
+import {TDefaultForm} from "./DefaultForm";
 import * as React from "react";
 
 let counter = 0;
@@ -10,7 +10,7 @@ const DefaultForm = () => {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm<IDefaultForm>({
+    } = useForm({
         //resolver: yupResolver(accessControlSchemaCreationValidation),
         defaultValues: {
             firstname: '',
@@ -42,7 +42,7 @@ const DefaultForm = () => {
                     </div>
 
                     <input
-                        {...register("firstname", { required: true })}
+                        {...register('firstname', { required: true })}
                         className="px-4 py-2 border border-[#eaecee] rounded-[6px] focus:border-[#535961]"
                     />
 
